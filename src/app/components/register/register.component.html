@@ -1,0 +1,110 @@
+<section class="formulaire">
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+    <!-- Input nom/prénom -->
+    <mat-form-field appearance="fill">
+      <mat-label>Nom / Prénom</mat-label>
+      <input matInput formControlName="name" type="text" minlength="2">
+      <mat-icon matSuffix>account_circle</mat-icon>
+    </mat-form-field>
+
+    <!-- Input pseudo -->
+    <mat-form-field appearance="fill">
+      <mat-label>Pseudonyme</mat-label>
+      <input matInput formControlName="pseudo" type="text" minlength="2">
+      <mat-icon matSuffix>face</mat-icon>
+    </mat-form-field>
+
+    <!-- Input date de naissance -->
+    <mat-form-field appearance="fill">
+      <mat-label>Date de naissance</mat-label>
+      <input matInput formControlName="dateNaissance" type="date" minlength="2">
+    </mat-form-field>
+
+    <!-- Input email -->
+    <mat-form-field appearance="fill">
+      <mat-label>Adresse e-mail</mat-label>
+      <input matInput type="email" formControlName="email" placeholder="exemple@exemple.com" minlength="2">
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+
+    <!-- Input telephone -->
+    <mat-form-field appearance="fill">
+      <mat-label>Numéro de téléphone</mat-label>
+      <span matPrefix>+33 &nbsp;</span>
+      <input type="tel" matInput formControlName="telephone" placeholder="0 00 00 00 00">
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+
+    <!-- Input de l'adresse -->
+    <mat-form-field appearance="fill">
+      <mat-label>Adresse</mat-label>
+      <input type="text" matInput formControlName="adresse" placeholder="Votre adresse" minlength="2">
+      <mat-icon matSuffix>home</mat-icon>
+    </mat-form-field>
+
+    <!-- Input Code Postal -->
+    <mat-form-field appearance="fill">
+      <mat-label>Postal Code</mat-label>
+      <input matInput formControlName="codePostal" #postalCode maxlength="5" placeholder="Ex. 75000" minlength="2">
+      <!-- <mat-hint text-align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+      <mat-icon matSuffix>home</mat-icon>
+    </mat-form-field>
+
+    <!-- Input ville -->
+    <mat-form-field appearance="fill">
+      <mat-label>Ville</mat-label>
+      <input matInput formControlName="ville" placeholder="Ex. Paris" minlength="2">
+      <mat-icon matSuffix>home</mat-icon>
+    </mat-form-field>
+
+    <!-- Input pays -->
+    <mat-form-field appearance="fill">
+      <mat-label>Pays</mat-label>
+      <input type="text" placeholder="Taper votre pays" aria-label="Pays" matInput [matAutocomplete]="auto"
+        formControlName="pays" minlength="2">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix>language</mat-icon>
+    </mat-form-field>
+
+
+    <!-- Input compétences -->
+    <button type="button" mat-raised-button (click)="addSkill()" class="addSkills">
+      <mat-label class="labelSkill">Ajouter une compétence </mat-label>
+      <mat-icon class="plusSkill">add</mat-icon>
+    </button>
+    <ng-container formArrayName="skills">
+      <div *ngFor="let _ of skills.controls; index as i">
+        <mat-form-field class="inputSkill">
+          <input matInput [formControlName]="i" minlength="2" />
+          <mat-icon matSuffix (click)="removeSkill(0)">delete_forever</mat-icon>
+        </mat-form-field>
+      </div>
+    </ng-container>
+
+    <!-- Input password -->
+    <mat-form-field appearance="fill">
+      <mat-label>Mot de Passe</mat-label>
+      <input matInput formControlName="password" placeholder="Votre mot de passe">
+      <mat-icon matSuffix>password</mat-icon>
+    </mat-form-field>
+
+    <!-- Input confirm password -->
+    <mat-form-field appearance="fill">
+      <mat-label>Confirmation de mot de passe</mat-label>
+      <input matInput formControlName="confirmPassword" placeholder="Votre mot de passe à confirmer">
+      <mat-icon matSuffix>password</mat-icon>
+    </mat-form-field>
+
+
+    <button mat-raised-button class="sendButton" type="submit" color="primary"
+      [disabled]="userForm.invalid">Valider</button>
+
+  </form>
+
+</section>
