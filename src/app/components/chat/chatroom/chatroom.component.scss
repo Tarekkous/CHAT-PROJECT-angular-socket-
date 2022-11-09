@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Bebas+Neue&family=Cousine&family=Dosis:wght@200&family=Fredericka+the+Great&family=Glory:wght@100&family=Hind+Madurai:wght@300&family=Indie+Flower&family=Kavoon&family=Koulen&family=Lobster&family=Lobster+Two&family=M+PLUS+1:wght@100&family=Open+Sans:wght@300&family=Pacifico&family=Quicksand:wght@600&family=Source+Sans+Pro:wght@200&family=Tapestry&display=swap");
+.active {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.tata , .toto {
+  background-color: red;
+}
+//! messages disposition
+.msgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100vh - 150px);
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .msgReçu {
+    color: white;
+    margin: 2% 5%;
+    background-color: rgba(16, 16, 90, 0.548);
+    border-radius: 15px;
+    width: fit-content;
+    overflow-wrap: break-word;
+    padding: 5px 5px 2px 3px;
+  }
+  .MyMsg {
+    float: right;
+    margin: 1% 5%;
+    font-size: 14px;
+    background-color:black;
+    border-radius: 15px;
+    width: fit-content;
+    overflow-wrap: break-word;
+    padding: 5px 5px 2px 3px;
+    color: white;
+  }
+}
+
+
+
+#style-15::-webkit-scrollbar-track {
+  background-color: #a5b9da;
+  border-radius: 10px;
+}
+
+#style-15::-webkit-scrollbar {
+  width: 10px;
+  background-color: #a5b9da;
+}
+
+#style-15::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    40% 0%,
+    75% 84%,
+    from(#4742abe9),
+    to(#a5b9da),
+    color-stop(0.6, #191653)
+  );
+}
+
+.textInput {
+  width: 100vw;
+  margin: auto 100px;
+
+  .champMsg {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    left: 35%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+}
+.iconeMsg {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+}
+h1 {
+  text-align: center;
+  font-size: 42px;
+  color: white;
+  font-weight: 800;
+  position: absolute;
+  bottom: 50%;
+  left: 30%;
+  text-transform: capitalize;
+  font-family: "Quicksand", sans-serif;
+}
+
+// .msgReçu {
+//     font-size: 20px;
+//     width: fit-content;
+//     font-style: italic;
+//     color: white;
+//     background-color: rgb(24, 16, 16);
+//     border-radius: 20px;
+//     padding: 15px;
+//     padding-top: 5px;
+//     margin-top: 5px;
+//     margin-left: 50%;
+// }
+
+// .MyMsg {
+//     font-size: 14px;
+//     font-style: italic;
+//     color: white;
+//     background-color: rgba(106, 106, 196, 0.548);
+//     max-width: 100%;
+//     width: fit-content;
+//     height: fit-content;
+//     border-radius: 15px;
+//     overflow-wrap: break-word;
+//     padding: 5px 5px 2px 3px;
+//     margin-top: 5px;
+//     margin-left: 50%;
+
+// }

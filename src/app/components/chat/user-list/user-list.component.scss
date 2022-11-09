@@ -1,0 +1,66 @@
+.searchbar {
+  margin: 10px;
+}
+.input-search {
+  width: 17vw;
+  margin-left: 10px;
+}
+.all {
+  margin: 10px;
+}
+.container {
+  .identity {
+    display: flex;
+    margin: 5px;
+    border: 1px solid rgb(126, 126, 219);
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+.my-identity {
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid rgb(126, 126, 219);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: white; .id {
+    margin-left: 30%;
+  }
+}
+.card {
+  overflow-y: scroll;
+  height: 1000px;
+  background-color:#A5B9DA;
+}
+.vert {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  box-shadow: 0px 1px 0px 0px #f0f0f0;
+  border-radius: 50%;
+  top: 8%;
+  left: 2%;
+}
+.gris {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 50%;
+  top: 10%;
+  left: 2%;
+}
+.badge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  top: 22%;
+  left: 14%;
+}
+.empty .exemple-empty{
+  background-color: transparent;
+}

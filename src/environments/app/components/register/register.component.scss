@@ -1,0 +1,52 @@
+// form {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .mat-form-field {
+//  width: 300px;
+// }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 100px;
+}
+
+.sendButton {
+  width: 30%;
+  margin: 10px;
+}
+
+.addSkills {
+  // display: flex;
+  // justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.labelSkill {
+ margin-right: 20px;
+}
+
+.plusSkill {
+  margin-left: 20px;
+}
+
+// .btnSkill {
+//   display: flex;
+//   justify-content: flex-end;
+//   margin: 20px 0 15px;
+// }
+
+.inputSkill {
+  width: 100%;
+}

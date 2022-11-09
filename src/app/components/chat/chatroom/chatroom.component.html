@@ -1,0 +1,51 @@
+<app-chat-top-bar [data]="userCurrent"></app-chat-top-bar>
+
+<section *ngIf="!userCurrent">
+  <h1>Select a conversation or start a new chat</h1>
+  <mat-icon class="iconeMsg"> message</mat-icon>
+</section>
+
+<section class="msgContainer" ngClass="active" id="style-15">
+
+
+
+
+  <div *ngFor="let message of allMessages">
+    <!-- Mes messages envoyés  -->
+    <div>
+
+      <div class="MyMsg" *ngIf="message.userID.username !== userCurrent.username">
+      <h2>{{ message.userID.username }} : </h2>
+
+        <p>{{ message.content }}</p>
+        <p>{{ message.date  }}</p>
+      </div>
+    </div>
+
+    <!-- les messages reçus  -->
+    <!-- <span>{{message.friendID.username}}</span> -->
+
+    <div class="msgReçu" *ngIf="message.userID.username == userCurrent.username" >
+      <h2>{{ message.userID.username }} : </h2>
+
+      <p>{{ message.content }}</p>
+      <p>{{ message.date }}</p>
+    </div>
+  </div>
+
+
+
+
+  <div *ngIf="userCurrent" class="textInput">
+    <form class="champMsg" [formGroup]="msgInput" (ngSubmit)="onSend()">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Message</mat-label>
+        <input matInput #message formControlName="messageText" />
+        <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+      </mat-form-field>
+      <button type="submit" color="primary" mat-button color="primary">
+        Send
+      </button>
+    </form>
+  </div>
+</section>

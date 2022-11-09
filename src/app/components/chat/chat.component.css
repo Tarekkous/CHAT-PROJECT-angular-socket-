@@ -1,0 +1,16 @@
+section {
+  display: flex;
+  background-color: rgb(172, 213, 226);
+  height: 100%;
+  width: 100%;
+}
+section .list, section .room {
+  padding: 10px;
+  height: 100%;
+}
+section .list {
+  width: 30%;
+}
+section .room {
+  width: 70%;
+}/*# sourceMappingURL=chat.component.css.map */

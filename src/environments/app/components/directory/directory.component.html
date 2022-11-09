@@ -1,0 +1,18 @@
+<section>
+
+    <div class="entete">
+
+        <h2>Vos fichiers</h2>
+
+        <button type="button" mat-raised-button (click)="addNewDir()">
+            <mat-label>Ajouter un fichier</mat-label>
+        </button>
+    </div>
+
+    <div *ngFor="let dir of directories">
+        <span>Nom :{{dir.data.name}}</span>
+        <span>CHemin{{dir.data.path}}</span>
+        <span>descirption{{dir.data.description}}</span>
+    </div>
+
+</section>

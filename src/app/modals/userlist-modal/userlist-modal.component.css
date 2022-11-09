@@ -1,0 +1,22 @@
+h2 {
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttons .yesBtn {
+  background-color: green;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+.buttons .noBtn {
+  background-color: red;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}/*# sourceMappingURL=userlist-modal.component.css.map */

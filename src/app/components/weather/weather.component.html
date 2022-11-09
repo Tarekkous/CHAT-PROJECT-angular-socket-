@@ -1,1 +1,24 @@
-<p>weather works!</p>
+<!-- <div class="infos">
+  {{ rue }} <br />
+  {{ ville }} <br />
+  {{ codepostal }} <br />
+  {{ temperature }}°C
+  <button (click)="openNewAdress()">Changer de localité</button>
+</div> -->
+<mat-card class="mat-elevation-z5 infos">
+  <mat-card-header>
+    <mat-card-subtitle>WEATHER</mat-card-subtitle>
+    <mat-card-title
+      >{{ rue }} <br />
+      {{ ville }} <br />
+      {{ codepostal }} <br />
+    </mat-card-title>
+
+  </mat-card-header>
+  <img [src]="imageUrl" alt="">
+
+  <mat-card-content> </mat-card-content>
+  <mat-card-actions>
+    <button (click)="openNewAdress()" mat-button>Change location</button>
+  </mat-card-actions>
+</mat-card>

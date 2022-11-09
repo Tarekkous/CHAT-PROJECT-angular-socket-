@@ -1,0 +1,27 @@
+<!-- <h2>est ce que vous êtes sur de vouloir parler à cet utilisateur ?</h2>
+    <span>{{dataUser.first_name}}</span>
+    <span>{{dataUser.last_name}}</span>
+<img mat-card-avatar [src]=dataUser.avatar> <br><br>
+<div class="buttons">
+    <button mat-raised-button color="primary" (click)="onValidate()" class="yesBtn">yes</button>
+    <button mat-raised-button color="warn" (click)="onCancel()" class="noBtn">no</button>
+</div> -->
+
+
+<mat-card class="example-card">
+    <mat-card-content>est ce que vous êtes sur de vouloir parler à cet utilisateur ?</mat-card-content>
+    <mat-card-title>
+        <div class="name">
+            {{dataUser.firstName}}
+            {{dataUser.lastName}}
+        </div>
+    </mat-card-title>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="onValidate()">YES</button>
+        <button mat-button color="warn" (click)="onCancel()">NO</button>
+    </mat-card-actions>
+    <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>

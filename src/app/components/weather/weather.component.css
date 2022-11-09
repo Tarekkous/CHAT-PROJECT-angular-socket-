@@ -1,0 +1,24 @@
+.infos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px royalblue;
+  width: 200px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  flex-direction: column;
+}
+.infos button {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #d1daf5;
+  background-color: #d1daf5;
+  border: 1px solid #798fce;
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 10px;
+}/*# sourceMappingURL=weather.component.css.map */

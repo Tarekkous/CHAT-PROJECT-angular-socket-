@@ -7,13 +7,13 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
- 
+
  userInfo!:any[];
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((value:any)=> this.userInfo = value.data)
+    // this.userService.getUsers().subscribe((value:any)=> this.userInfo = value.data)
   }
 
 }

@@ -1,0 +1,29 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let elem of userInfo" class="col-4 mb-5">
+                <mat-card >
+                    <div class="identity">
+                        <img mat-card-avatar [src]="elem.avatar">
+                        <div class="id">
+                            <mat-card-content>{{elem.first_name}}</mat-card-content>
+                            <mat-card-content>{{elem.last_name}}</mat-card-content>
+                        </div>
+                    </div>
+                    <mat-card-content>{{elem.email}}</mat-card-content>
+                    <mat-card-content>{{elem.id}}</mat-card-content>
+                        
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</section>

@@ -1,0 +1,56 @@
+<div class="col">
+  <div class="my-identity" *ngIf="profil">
+    <img mat-card-avatar [src]="profil.avatar" />
+    <div class="id">
+      <mat-card-title>{{ profil.firstName }}</mat-card-title>
+      <mat-card-title>{{ profil.lastName }}</mat-card-title>
+    </div>
+  </div>
+</div>
+
+<mat-form-field class="input-search" appearance="fill" [formGroup]="searchBar">
+  <mat-label>Search</mat-label>
+  <input matInput type="text" formControlName="Search" />
+</mat-form-field>
+
+<!--! Pour utiliser le form control
+        <form >
+            <input type="text" class="searchbar" [formControl]="searchCtrl">  -->
+<!-- </form> -->
+<!-- __________________________________ -->
+<section class="card">
+  <div class="all" *ngFor="let user of userInfo" (click)="onOpenModal(user)">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div
+        class="badge"
+        [matBadge]="user.nbMessageEnAttente"
+        matBadgePosition="after"
+        matBadgeColor="primary"
+      >
+        <span mat-card-avatar [ngClass]="user.online ? 'empty' : 'exemple-empty'" > </span>
+
+      </div>
+      <img mat-card-avatar [ngClass]="user.online ? 'vert' : 'gris'" />
+
+          <img mat-card-avatar [src]="user.avatar" />
+
+        <mat-card-title>{{ user.firstName }}</mat-card-title>
+        <mat-card-title>{{ user.lastName }}</mat-card-title>
+        <mat-card-subtitle> ________________ </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Ajouter en tant qu'ami ?</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          (click)="onAddFriend(user)"
+          mat-button
+          style="background-color: blue; color: white"
+        >
+          ADD
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>

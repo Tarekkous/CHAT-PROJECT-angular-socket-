@@ -1,0 +1,16 @@
+.active {
+  background-color: #ACD5E2;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
+.leftbar {
+  background-color: #ACD5E2;
+  height: 100%;
+}/*# sourceMappingURL=side-bar-left.component.css.map */

@@ -1,0 +1,23 @@
+section {
+    display: flex;
+    background-color: rgb(165, 185, 218);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+
+    .list,
+    .room {
+        padding: 10px;
+        height: 100%;
+    }
+
+    .list {
+        width: 30%;
+
+    }
+
+    .room {
+        width: 70%;
+    }
+}

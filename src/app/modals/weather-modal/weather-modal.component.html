@@ -1,0 +1,16 @@
+<form [formGroup]="weatherForm" (ngSubmit)="onSubmit()">
+    <mat-label>rue</mat-label>
+    <input type="text" formControlName="rue">
+
+    <mat-label>ville</mat-label>
+    <input type="text" formControlName="ville">
+
+    <mat-label>code postal</mat-label>
+    <input type="text" formControlName="codepostal">
+
+    <mat-label>température</mat-label>
+    <input type="text" formControlName="temperature">
+    
+    <button type="submit" [disabled]="weatherForm.invalid">Changer</button>
+
+</form>

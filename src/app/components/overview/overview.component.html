@@ -1,0 +1,38 @@
+<!-- <app-side-bar-left></app-side-bar-left> -->
+<!-- <app-nav-bar></app-nav-bar> -->
+
+<!-- <section> -->
+<!-- balise qui permet de naviguer entre les components enfants -->
+<!-- <router-outlet></router-outlet> -->
+<!-- </section> -->
+
+<!-- <app-side-bar-right></app-side-bar-right> -->
+
+
+
+
+
+
+<section class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <app-side-bar-left></app-side-bar-left>
+        </div>
+
+        <div class="col-md-8">
+            <app-nav-bar></app-nav-bar>
+            <section>
+                <!-- balise qui permet de naviguer entre les components enfants -->
+                <router-outlet></router-outlet>
+            </section>
+        </div>
+
+        <div class="col-md-2">
+            <app-side-bar-right></app-side-bar-right>
+        </div>
+
+    </div>
+
+</section>

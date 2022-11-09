@@ -2,24 +2,24 @@
 
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
 
-    <!-- Input nom/prénom -->
+    <!-- Input username -->
     <mat-form-field appearance="fill">
-      <mat-label>Nom / Prénom</mat-label>
-      <input matInput formControlName="name" type="text" minlength="2">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" type="text" minlength="2">
       <mat-icon matSuffix>account_circle</mat-icon>
     </mat-form-field>
 
-    <!-- Input pseudo -->
+    <!-- Input first name -->
     <mat-form-field appearance="fill">
-      <mat-label>Pseudonyme</mat-label>
-      <input matInput formControlName="pseudo" type="text" minlength="2">
+      <mat-label>firstName</mat-label>
+      <input matInput formControlName="firstName" type="text" minlength="2">
       <mat-icon matSuffix>face</mat-icon>
     </mat-form-field>
 
-    <!-- Input date de naissance -->
+    <!-- Input last name -->
     <mat-form-field appearance="fill">
-      <mat-label>Date de naissance</mat-label>
-      <input matInput formControlName="dateNaissance" type="date" minlength="2">
+      <mat-label>lastName</mat-label>
+      <input matInput formControlName="lastName" type="text" minlength="2">
     </mat-form-field>
 
     <!-- Input email -->
@@ -31,39 +31,39 @@
 
     <!-- Input telephone -->
     <mat-form-field appearance="fill">
-      <mat-label>Numéro de téléphone</mat-label>
+      <mat-label>PhoneNumber</mat-label>
       <span matPrefix>+33 &nbsp;</span>
-      <input type="tel" matInput formControlName="telephone" placeholder="0 00 00 00 00">
+      <input type="tel" matInput formControlName="phoneNumber" placeholder="0 00 00 00 00">
       <mat-icon matSuffix>phone</mat-icon>
     </mat-form-field>
 
     <!-- Input de l'adresse -->
     <mat-form-field appearance="fill">
-      <mat-label>Adresse</mat-label>
-      <input type="text" matInput formControlName="adresse" placeholder="Votre adresse" minlength="2">
+      <mat-label>Street</mat-label>
+      <input type="text" matInput formControlName="street" placeholder="Votre adresse" minlength="2">
       <mat-icon matSuffix>home</mat-icon>
     </mat-form-field>
 
     <!-- Input Code Postal -->
     <mat-form-field appearance="fill">
       <mat-label>Postal Code</mat-label>
-      <input matInput formControlName="codePostal" #postalCode maxlength="5" placeholder="Ex. 75000" minlength="2">
+      <input matInput formControlName="zipCode" #postalCode maxlength="5" placeholder="Ex. 75000" minlength="2">
       <!-- <mat-hint text-align="end">{{postalCode.value.length}} / 5</mat-hint> -->
       <mat-icon matSuffix>home</mat-icon>
     </mat-form-field>
 
     <!-- Input ville -->
     <mat-form-field appearance="fill">
-      <mat-label>Ville</mat-label>
-      <input matInput formControlName="ville" placeholder="Ex. Paris" minlength="2">
+      <mat-label>City</mat-label>
+      <input matInput formControlName="city" placeholder="Ex. Paris" minlength="2">
       <mat-icon matSuffix>home</mat-icon>
     </mat-form-field>
 
     <!-- Input pays -->
     <mat-form-field appearance="fill">
-      <mat-label>Pays</mat-label>
+      <mat-label>Country</mat-label>
       <input type="text" placeholder="Taper votre pays" aria-label="Pays" matInput [matAutocomplete]="auto"
-        formControlName="pays" minlength="2">
+        formControlName="country" minlength="2">
       <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
           {{option}}
@@ -103,7 +103,7 @@
 
 
     <button mat-raised-button class="sendButton" type="submit" color="primary"
-      [disabled]="userForm.invalid">Valider</button>
+      [disabled]="userForm.invalid" >Valider</button>
 
   </form>
 
