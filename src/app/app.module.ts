@@ -5,17 +5,15 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+// import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AgePipe } from './pipes/age.pipe';
 import { MatListModule } from '@angular/material/list';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCardModule } from '@angular/material/card';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+// import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { UserModalComponent } from './modals/user-modal/user-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -42,19 +40,17 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { environment } from 'src/environments/environment';
 import {MatBadgeModule} from '@angular/material/badge';
+import { ShareModule } from './modules/share/share.module';
 
 const config: SocketIoConfig = { url: `${environment.API_URL}`, options: {} };
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    LoginComponent,
-    RegisterComponent,
     AgePipe,
     UserModalComponent,
     DirectoryComponent,
     ChatComponent,
-    // routingcomponents,
     WeatherComponent,
     DirectoryModalComponent,
     WeatherModalComponent,
@@ -75,15 +71,15 @@ const config: SocketIoConfig = { url: `${environment.API_URL}`, options: {} };
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    // ReactiveFormsModule,
     MatListModule,
     MatAutocompleteModule,
     MatCardModule,
-    MatIconModule,
+    // MatIconModule,
     MatGridListModule,
     MatInputModule,
-    MatFormFieldModule,
-    FormsModule,
+    // MatFormFieldModule,
+    // FormsModule,
     MatButtonModule,
     MatDialogModule,
     MatProgressBarModule,
@@ -92,7 +88,10 @@ const config: SocketIoConfig = { url: `${environment.API_URL}`, options: {} };
     SocketIoModule,
     SocketIoModule.forRoot(config),
     MatSlideToggleModule,
-    MatBadgeModule
+    MatBadgeModule,
+    ShareModule
+  ],exports:[
+    ShareModule
   ],
   providers: [TokenInterceptorPovider],
   bootstrap: [AppComponent]

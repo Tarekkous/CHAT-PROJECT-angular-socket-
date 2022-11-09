@@ -8,11 +8,16 @@ import { Observable } from 'rxjs';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent implements OnInit {
+
 user$!:Observable<any>
+displayUsers!:any;
+
   constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-
+this.activatedRoute.data.subscribe(({userRes})=>{
+  this.displayUsers = userRes
+})
   }
 
 }

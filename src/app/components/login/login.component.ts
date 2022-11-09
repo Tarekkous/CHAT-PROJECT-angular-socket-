@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { map, Observable, startWith } from 'rxjs';
-import { UserModalComponent } from 'src/app/modals/user-modal/user-modal.component';
 import { User } from 'src/app/models/user';
-import { DataService } from 'src/app/services/data.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({

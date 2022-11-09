@@ -52,6 +52,7 @@ export class ChatroomComponent implements OnInit {
     //   this.MessageJoke = value;
     // });
 
+
     // //! correction sockeeet
 
     // initiation
