@@ -14,9 +14,8 @@
     <!-- Mes messages envoyés  -->
     <div>
 
-      <div class="MyMsg" *ngIf="message.userID.username !== userCurrent.username">
+      <div class="MyMsg" *ngIf="message.userID.username !== userCurrent.username" >
       <h2>{{ message.userID.username }} : </h2>
-
         <p>{{ message.content }}</p>
         <p>{{ message.date  }}</p>
       </div>

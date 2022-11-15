@@ -3,15 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
-  RequiredValidator,
   Validators,
 } from '@angular/forms';
-import { User } from 'src/app/models/user';
 import { JokeService } from 'src/app/services/joke.service';
 import { UserService } from 'src/app/services/user.service';
-import { Socket } from 'ngx-socket-io';
 import { ChatService } from 'src/app/services/chat.service';
-import { environment } from 'src/environments/environment';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({

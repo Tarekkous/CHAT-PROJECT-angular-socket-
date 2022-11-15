@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { RegisterRoutingModule } from './register-routing.module';
 import { ShareModule } from '../share/share.module';
 import { RegisterComponent } from 'src/app/components/register/register.component';

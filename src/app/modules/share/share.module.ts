@@ -7,6 +7,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 
 
@@ -24,7 +29,12 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatListModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatProgressBarModule
+
   ],exports:[
     CommonModule,
     MatIconModule,
@@ -33,7 +43,13 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatListModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatProgressBarModule
+
+
   ]
 })
 export class ShareModule { }
